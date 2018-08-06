@@ -40,7 +40,6 @@ else if (user === 'pierre') {
 while (scoreFinal != 3){
 
 var choixUtilisateur = prompt("Pierre, feuille, ciseaux ?").toLowerCase();
-
 var erreur = 1 ;
 while (erreur === 1){
   if ((choixUtilisateur === "pierre")||(choixUtilisateur ==="ciseaux")||(choixUtilisateur === "feuille")){
