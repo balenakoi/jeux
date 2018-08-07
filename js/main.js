@@ -1,6 +1,6 @@
-var scoreUtilisateur = 0;
-var scoreOrdinateur = 0;
-var scoreFinal = 0;
+var playerScore = 0;
+var computerScore = 0;
+var finalScore = 0;
 function comparer (user, computer) {
 
 //*****************Egalité********************
@@ -13,31 +13,31 @@ if (user === computer) {
 
 else if (user === 'pierre') {
   if (computer === 'ciseaux') {
-        scoreUtilisateur++;
+        playerScore++;
         return "La pierre gagne ! Tu gagnes 1 point !";
 }else {
-       scoreOrdinateur++;
+       computerScore++;
        return "La feuille gagne ! L''ordinateur gagne 1 point";
  }
 }else if (user === 'feuille') {
   if (computer === 'pierre') {
-        scoreUtilisateur++;
+        playerScore++;
         return "La feuille gagne ! Tu gagnes 1 point !";
   }else {
-        scoreOrdinateur++;
+        computerScore++;
         return "Le ciseaux gagnent ! L'ordinateur gagne 1 point";
         }
   }else if (user === 'ciseaux') {
     if (computer === 'feuille') {
-          scoreUtilisateur++;
+          playerScore++;
           return "Le ciseaux gagne ! Tu gagnes 1 point !";
   }else {
-          scoreOrdinateur++;
+          computerScore++;
           return "La pierre gagne ! L'ordinateur gagne 1 point";
         }
     }
 }
-while (scoreFinal != 3){
+while (finalScore != 3){
 
 var choixUtilisateur = prompt("Pierre, feuille, ciseaux ?").toLowerCase();
 var erreur = 1 ;
@@ -71,14 +71,14 @@ while (erreur === 1){
   console.log(comparer(choixUtilisateur,choixOrdi));
 
 //*******************affichage du score*******************************
-  console.log("User "+scoreUtilisateur+"-"+scoreOrdinateur+" Ordinateur");
-  if ((scoreUtilisateur===3)||(scoreOrdinateur===3)){
-    scoreFinal = 3 ;
+  console.log("User " + playerScore + "-" + computerScore + " User");
+  if ((playerScore===3)||(computerScore===3)){
+    finalScore = 3 ;
   }
 
 }
 
-if (scoreUtilisateur===3){
+if (playerScore===3){
   console.log("Bravo ! Vous avez gagné !!");
 }
 else {
